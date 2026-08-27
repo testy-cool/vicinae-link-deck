@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181824"/>
+      <stop offset="100%" stop-color="#0a0a10"/>
+    </linearGradient>
+
+    <!-- Vibrant Electric Gradients -->
+    <linearGradient id="goldFire" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+
+    <linearGradient id="electricViolet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e879f9"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <!-- Strong Glow Shadow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#a855f7" flood-opacity="0.6"/>
+    </filter>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#f59e0b" flood-opacity="0.7"/>
+    </filter>
+  </defs>
+
+  <!-- Deep Onyx Base -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)"/>
+  <rect width="504" height="504" x="4" y="4" rx="124" fill="none" stroke="#a855f7" stroke-opacity="0.3" stroke-width="4"/>
+
+  <!-- Layer 1: Violet Back Deck -->
+  <g filter="url(#glow)">
+    <rect x="110" y="110" width="292" height="170" rx="36" fill="url(#electricViolet)" transform="rotate(-8 256 195)"/>
+  </g>
+
+  <!-- Layer 2: Cyan Middle Deck -->
+  <g filter="url(#glow)">
+    <rect x="110" y="180" width="292" height="170" rx="36" fill="url(#neonCyan)" transform="rotate(4 256 265)"/>
+  </g>
+
+  <!-- Layer 3: Gold / Ember Front Deck -->
+  <g filter="url(#goldGlow)">
+    <rect x="100" y="240" width="312" height="185" rx="40" fill="url(#goldFire)"/>
+    <rect x="100" y="240" width="312" height="185" rx="40" fill="none" stroke="#ffffff" stroke-opacity="0.4" stroke-width="3"/>
+
+    <!-- High-tech Fast-Link Glyph (Bold White Bolt + Geometric Nodes) -->
+    <!-- Center Bolt / Link -->
+    <path d="M 270 270 L 220 335 L 260 335 L 242 395 L 305 325 L 265 325 Z" fill="#ffffff" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.3))"/>
+    
+    <!-- Domain Node Dots -->
+    <circle cx="150" cy="332" r="14" fill="#ffffff"/>
+    <line x1="164" y1="332" x2="210" y2="332" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+
+    <circle cx="362" cy="332" r="14" fill="#ffffff"/>
+    <line x1="305" y1="332" x2="348" y2="332" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

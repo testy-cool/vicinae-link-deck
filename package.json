@@ -1,0 +1,57 @@
+{
+  "$schema": "https://raw.githubusercontent.com/vicinaehq/vicinae/refs/heads/main/extra/schemas/extension.json",
+  "name": "link-deck",
+  "title": "Link Deck",
+  "description": "Fast domain & path launcher for links and commands",
+  "categories": ["Productivity", "Developer Tools"],
+  "license": "MIT",
+  "author": "testycool",
+  "icon": "extension_icon.png",
+  "commands": [
+    {
+      "name": "browse-shortcuts",
+      "title": "Link Deck",
+      "description": "Launch grouped links, commands & domains",
+      "icon": "extension_icon.png",
+      "mode": "view",
+      "keywords": ["deck", "hub", "links", "domains", "bookmarks", "tree", "lh", "jump", "go"]
+    },
+    {
+      "name": "add-shortcut",
+      "title": "Add to Deck",
+      "description": "Save a new link or command",
+      "icon": "extension_icon.png",
+      "mode": "view",
+      "keywords": ["add", "save", "new", "create", "bookmark"]
+    }
+  ],
+  "preferences": [
+    {
+      "name": "terminal",
+      "title": "Terminal Emulator",
+      "description": "Command to launch terminal for shell commands (e.g. x-terminal-emulator, alacritty, kitty)",
+      "type": "textfield",
+      "required": false,
+      "default": "x-terminal-emulator"
+    },
+    {
+      "name": "browser",
+      "title": "Custom Browser Command",
+      "description": "Leave empty for system default (xdg-open), or specify google-chrome, firefox, etc.",
+      "type": "textfield",
+      "required": false,
+      "default": ""
+    }
+  ],
+  "scripts": {
+    "build": "bun build src/browse-shortcuts.tsx --outfile browse-shortcuts.js --target node --format cjs --external react --external @vicinae/api --production && bun build src/add-shortcut.tsx --outfile add-shortcut.js --target node --format cjs --external react --external @vicinae/api --production"
+  },
+  "dependencies": {
+    "@vicinae/api": "^0.19.3"
+  },
+  "devDependencies": {
+    "@types/react": "19.0.10",
+    "react": "19.0.0",
+    "typescript": "^5.9.2"
+  }
+}
